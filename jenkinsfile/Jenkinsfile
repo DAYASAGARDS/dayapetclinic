@@ -7,7 +7,7 @@ node {
     git branch: 'main', url: 'https://github.com/DAYASAGARDS/dayapetclinic.git'
  }
  
- def project_path=""
+ def project_path="."
  
  dir(project_path) {
  
