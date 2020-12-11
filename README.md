@@ -1,6 +1,6 @@
 # dayapetclinic
 
-        Simple Linux command
+ ##       Simple Linux command
 
 
            7 date >> hello.txt
@@ -9,15 +9,15 @@
           11 cat hello.txt 
 
 
-    Docker hub
+ ##   Docker hub
 
       97  docker login --username=dayasagards --password=Sherilyn@123
      104  docker push dayasagards/demomysql:5.7
 
-    Github  
+##    Github  
     From <https://github.com/DAYASAGARDS/Lab2.1> 
 
-    Install Github
+##    Install Github
      100  git --version
       101  sudo apt-get install get
       102  sudo apt-get install git
@@ -28,7 +28,7 @@
 
 
 
-    Add commit
+ ##   Add commit
 
     115  git init
       116  git add .
@@ -43,7 +43,7 @@
       124  git status
 
 
-    Jenkins
+ ##   Jenkins
     From <https://github.com/amitvashisttech/devops301-mindtree-17Oct2020/tree/main/02-Jenkins> 
       apt-get install default-jdk -y
       java -version
@@ -71,7 +71,7 @@
     mvn package
 
 
-    ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+##    ORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
 
 
     From <https://github.com/DAYASAGARDS/Lab2.1>
@@ -86,7 +86,7 @@
 
 
 
-     tomcat
+ ##    tomcat
 
      674  mkdir petclinic
       675  cd petclinic/
@@ -137,7 +137,7 @@
       740  ps -ef | grep -i tomcat
 
 
-        Docker
+  ##      Docker
 
         From <https://github.com/amitvashisttech/devops301-mindtree-17Oct2020/blob/main/04-Docker/Day3_History.txt> 
         docker run busybox echo "welcome container"         -> (usually don’t do this)
