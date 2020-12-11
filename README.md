@@ -1,5 +1,19 @@
 # dayapetclinic
 
+        Simple Linux command
+
+
+           7 date >> hello.txt
+           9 cat hello.txt
+          10 hostname >> hello.txt 
+          11 cat hello.txt 
+
+
+    Docker hub
+
+      97  docker login --username=dayasagards --password=Sherilyn@123
+     104  docker push dayasagards/demomysql:5.7
+
     Github  
     From <https://github.com/DAYASAGARDS/Lab2.1> 
 
@@ -123,10 +137,74 @@
       740  ps -ef | grep -i tomcat
 
 
+        Docker
+
+        From <https://github.com/amitvashisttech/devops301-mindtree-17Oct2020/blob/main/04-Docker/Day3_History.txt> 
+        docker run busybox echo "welcome container"         -> (usually don’t do this)
+        docker run -it busybox
+                Come out of container without exiting  "Ctrl +P+Q" (pause and quit)
+                "exit" to come out the container
+
+        docker images
+        docker ps
+        Docker ps -a                                                                                  -> all the containers
 
 
+        If you use Ctrl+P+Q - >
+        Docker attach <containerid or name>
 
-    Docker hub
 
-      97  docker login --username=dayasagards --password=Sherilyn@123
-     104  docker push dayasagards/demomysql:5.7
+        Docker exec <containerid or name> ls (or any command)
+        dayasagarsalian@dayasagarsalian:~$ docker exec 644e345d1fb6 cat hello.txt
+        date
+        Tue Dec  8 21:42:01 UTC 2020
+        644e345d1fb6
+
+        This is for stopped container
+        Docker start <containerid or name>
+        Then attach (this will retain everything done with the container)
+        Docker attach <containerid or name>
+
+        This stop gracefully(like press shut down)
+        Docker stop <containerid or name>
+
+        This will kill immediately (may lose data (like pressing the power button )
+        Docker kill <containerid or name>
+
+
+        Docker kill $(docker ps -q)  -> kill all open container
+        Docker rm $(docker ps -qa) -> q means quite, a means all
+
+
+        Create new docker image.
+        Docker commit -p -m "apacheimage" <containerId or name> apache-test-image:v1
+        P - pause and make snapshot -m message "name of the container you want:tag"
+
+
+        .bashrc in root folder we can add anything to execute.
+
+        Install and start apache
+        docker run -it apache-test-image:v1
+        This below if you want to always start the apache server inside the container (like Env host)
+        which apache2ctl
+        Echo "/usr/sbin/apache2ctl start" >> /root/.bashrc
+
+        Apache2ctl start -------->to start apache directly
+
+
+        -itd (demonizer) (it will start open the container do things and close without exiting)
+        --name test-apache-1 giving name for container
+        docker run -itd --name containerName apache-test-image:v1
+
+
+        Remember (.) isvery important it says present directory.
+        https://github.com/amitvashisttech/devops301-mindtree-17Oct2020/tree/main/04-Docker/02-Dockerfile/apache
+        (you should have Docker file in present directory)
+          844  docker build -t apache-dockerfile-img:v1 .
+          845  docker images
+          846  docker run -d apache-dockerfile-img:v1
+          847  docker ps
+          848  docker inspect festive_saha
+          849  curl 172.17.0.3/info.html
+
+
