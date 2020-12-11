@@ -1,13 +1,13 @@
 node {
  try {
  
- emailext body: 'test!!', subject: 'Pipeline Job started', to: 'naveenhl026@gmail.com'
+
  
  stage('Git CheckOut') {
-    git branch: 'main', url: 'https://github.com/DAYASAGARDS/dayapetclinic.git'
+    git branch: 'main', url: 'https://github.com/NaveenHL17/DevOps301-CaseStudy3.git'
  }
  
- def project_path="/"
+ def project_path="Jenkins/petclinic-code"
  
  dir(project_path) {
  
