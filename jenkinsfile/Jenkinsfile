@@ -38,7 +38,7 @@ rtUpload (
           "files": [
             {
               "pattern": "**/*.war",
-			  "target": "generic-snapshot/"
+			  "target": "generic-local/"
               
             }
          ]
